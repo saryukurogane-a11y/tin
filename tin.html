@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khát Vọng Tuổi Trẻ - Vinh Quang Việt Nam</title>
+    <style>
+        /* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fffaf0;
+}
+
+/* Link và list  */
+a {
+    text-decoration: none;
+    color: #ff69b4; 
+    transition: color 0.3s; 
+}
+
+a:hover {
+    color: #ff1493; 
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header  */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    background: #ffe4e1; 
+    border-radius: 10px; 
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    font-family: "Soviet Constructivism", sans-serif;
+    background: #fff; 
+    border: 1px solid #ffb6c1; 
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #333;
+    width: 300px;
+}
+
+.logo {
+    font-family: "Soviet Constructivism", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff69b4; 
+}
+
+/* Main Content */
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+/* Intro Slider  */
+.intro-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0; 
+}
+
+.intro-slider::before {
+  content: "";
+  display: block;
+  padding-top: 45%; 
+}
+
+.intro-slider .slider {
+  display: flex;
+  width: 400%; 
+  animation: slideshow 18s linear infinite;
+  animation-delay: 3s; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.intro-slider .slide {
+  flex: 0 0 25%;
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end; 
+  justify-content: flex-start; 
+  padding: 20px; 
+  border-radius: 10px;
+  position: relative;
+}
+.intro-slider .slide-content {
+  text-align: left;
+  color: white;
+  max-width: 75%;
+  background: rgba(0, 0, 0, 0.6); 
+  border-radius: 10px; 
+}
+
+.intro-slider .slide-content h1 {
+    font-family: "UTM Sharnay", sans-serif;
+    font-size: 25px; 
+    font-weight: 300;
+    margin: 0 0 10px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
+
+@keyframes slideshow {
+  0% { transform: translateX(0); }
+  27.78% { transform: translateX(0); }
+  33.33% { transform: translateX(-25%); }
+  61.11% { transform: translateX(-25%); }
+  66.67% { transform: translateX(-50%); }
+  94.44% { transform: translateX(-50%); }
+  100% { transform: translateX(-75%); }
+}
+/* Featured  */
+.featured {
+    background: #e0f7fa; 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    overflow: hidden;
+    border-radius: 15px; 
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+}
+
+.featured:hover {
+    background: #b2ebf2; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+.featured-content {
+    flex: 1;
+}
+
+.featured h1 {
+    font-family:"SVN-Buinton", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00838f; 
+}
+
+.featured p {
+    font-family:"SVN-Blenda Script", sans-serif;
+    font-size: 16px;
+    color: #555; 
+}
+
+/* Hình ảnh */
+.featured-img {
+    width: 200px; 
+            height: auto; /* Giữ tỷ lệ */
+            flex-shrink: 0; /* Không co lại thêm */     
+            border-radius: 10px;
+}
+
+/* Sidebar  */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-section {
+    background: #f3e5f5; 
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-section:hover {
+    background: #e1bee7; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.sidebar-section h3 {
+    font-family: "SVN-Buinton", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #7b1fa2; 
+}
+.tu-ay{
+    font-family: "Fz Thu PhapTieuTu Full Donate", sans-serif;
+    font-size: 30px;
+    margin: 20px 0;
+}
+.la-co-dang {
+    font-family: "Fz Thu PhapTieuTu Full Donate", sans-serif;
+    font-size: 30px;
+    margin: 20px 0;
+}
+.sidebar-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-section li {
+    font-family: "SVN-Blenda Script", sans-serif;
+    font-size: 15px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.sidebar-section li a:hover {
+    color: #7b1fa2; 
+}
+
+/* Bottom Articles  */
+.bottom {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.bottom-article {
+    flex: 1;
+    background: #fffde7; 
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-article:hover {
+    background: #fff9c4; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);}
+
+.bottom-article h3 {
+    color: #f57f17; 
+}
+.bottom-article h3 {
+    font-family: "SVN-Buinton", sans-serif;
+    font-size: 30px;
+}
+.bottom-article p {
+    font-family: "SVN-Blenda Script", sans-serif;
+}
+/*gop y*/
+ .form-box {
+            width: 400px;
+            margin: 50px auto;
+            background: #ffe4e1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            font-family: "Lost Vietnam", sans-serif;
+            font-size: 40px;
+            text-align: center;
+        }
+        label {
+            font-family: "SVN-Blenda Script", sans-serif;
+
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: "Soviet Constructivism", sans-serif;
+            font-size: 20px;
+        }
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="container header">
+        <div class="logo">Khát Vọng Tuổi Trẻ - Vinh Quang Việt Nam</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+    </header>
+<section class="container intro-slider">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide" style="background-image: url('https://drive.google.com/file/d/1zqOZ3RN6XbVUDFkKg34Vg0dW8rfd2t1g');">
+                <div class="slide-content">
+                    <h1><strong>Vững bước dưới cờ Đảng tại trái tim Tổ quốc</strong></h1>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('https://drive.google.com/file/d/1-vTMStXJJYOQokEKloEPDIb8mTvNnZxj');">
+                <div class="slide-content">
+                    <h1><strong>Cờ Đảng soi đường - Vững bước giữa trời thiêng Tổ quốc</strong></h1>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('https://drive.google.com/file/d/1g6O5GEHMcSe0BFs_-P3ao_Y4C5pvVlxH');">
+                <div class="slide-content">
+                    <h1><strong>Quân dân 1 lòng, vững bước dưới cờ Đảng quang vinh</strong></h1>
+                </div>
+            </div>
+            <!-- Duplicate slides for seamless loop (back and forth) -->
+            <div class="slide" style="background-image: url('https://drive.google.com/file/d/1zqOZ3RN6XbVUDFkKg34Vg0dW8rfd2t1g');">
+                <div class="slide-content">
+                    <h1><strong>Vững bước dưới cờ Đảng tại trái tim Tổ quốc</strong></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div class="container main">
+        <!-- Featured (Lời ngỏ) -->
+        <section class="featured">
+            <div class="featured-content">
+                <h1>Lời ngỏ</h1>
+
+                <p>Năm 2025, khi những giai điệu hào hùng của bản hùng ca 80 năm ngày độc lập (A80) vẫn còn vang vọng, và niềm tự hào SEA Games vẫn đang sục sôi trong tim mỗi người Việt, chúng em – những đoàn viên thanh niên thế hệ Gen Z – xin được gửi gắm tâm tình qua trang báo tường điện tử này. Với chủ đề 'Rạng bước dưới cờ Đảng', đây không chỉ là một bài tập Tin học, mà là không gian số nơi chúng em kết nối truyền thống vẻ vang 95 năm của Đảng với sức trẻ năng động của thời đại 4.0. Hãy cùng chúng em nhìn lại quá khứ tự hào, sống trọn khoảnh khắc vinh quang và hướng tới tương lai rạng rỡ!</p>
+            </div>
+            <img src="https://drive.google.com/file/d/15_UmvHa9IOLQCwW8Lc1HRtYVeZZxcL83" class="featured-img">
+        </section>
+
+        <!-- Sidebar (Thơ) -->
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>Thơ</h3>
+                <ul>
+                    <li><strong class="tu-ay">Từ Ấy - Tố Hữu</strong><br>Từ ấy trong tôi bừng nắng hạ<br> Mặt trời chân lý chói qua tim <br>Hồn tôi là một vườn hoa lá <br>Rất đậm hương và rộn tiếng chim...</li>
+                    <li><strong class="la-co-dang">Lá cờ Đảng – Chế Lan Viên</strong><br>Hình của Đảng hiện lên trên nền cờ đỏ <br>Giữa những màu vàng ngôi sao năm cánh <br>Ta ngước mắt nhìn lên và ta thấy <br>Ánh sáng ngàn đời soi sáng những ước mơ..</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom (Tấm gương) -->
+    <div class="container bottom">
+        <div class="bottom-article">
+            <a href="https://vi.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh">
+            <h3>Chủ tịch Hồ Chí Minh</h3>
+            <p>Vị lãnh tụ vĩ đại, tấm gương đạo đức cách mạng, suốt đời cống hiến cho độc lập dân tộc, hạnh phúc nhân dân.</p>
+        </a>
+        </div>
+        <div class="bottom-article">
+            <a href="https://vi.wikipedia.org/wiki/Tr%E1%BA%A7n_Ph%C3%BA">
+            <h3>Các nhà lãnh đạo tiền bối</h3>
+            <p>Trần Phú, Ngô Gia Tự, Lê Hồng Phong, Nguyễn Thị Minh Khai... hy sinh oanh liệt, đặt lợi ích của Đảng, cách mạng, dân tộc lên trên hết.</p>
+        </a>
+        </div>
+        <div class="bottom-article">
+            <a href="https://vi.wikipedia.org/wiki/Qu%C3%A2n_%C4%91%E1%BB%99i_nh%C3%A2n_d%C3%A2n_Vi%E1%BB%87t_Nam">
+            <h3>Quân đội nhân dân Việt Nam</h3>
+            <p>Lực lượng nòng cốt, luôn trung thành tuyệt đối, chiến đấu hy sinh vì mục tiêu độc lập, chủ nghĩa xã hội, dưới sự lãnh đạo của Đảng.</p>
+        </a>
+        </div>
+    </div>
+    <div class="form-box">
+    <h2>GÓP Ý</h2>
+        <form>
+            <label>Họ và tên:</label>
+            <input type="text" required>
+
+            <label>Lớp:</label>
+            <input type="text" required>
+
+            <label>Email:</label>
+            <input type="email" required>
+
+            <label>Nội dung góp ý:</label>
+            <textarea rows="4" required></textarea>
+
+            <button type="submit">Góp ý</button>
+        </form>
+    </div>
+    <a href="#top" style="position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:#007bff;color:#fff;text-align:center;line-height:50px;font-size:24px;border-radius:8px;text-decoration:none;">&#8593;</a>
+</body>
+</html>
